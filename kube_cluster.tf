@@ -7,7 +7,7 @@ resource "ovh_cloud_project_kube" "velocite" {
   private_network_id = tolist(ovh_cloud_project_network_private.kube.regions_attributes[*].openstackid)[0]
 }
 
-resource "ovh_cloud_project_kube_nodepool" "node_pool" {
+resource "ovh_cloud_project_kube_nodepool" "small" {
   service_name  = var.project_name
   kube_id       = ovh_cloud_project_kube.velocite.id
   name          = "small"
