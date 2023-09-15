@@ -1,3 +1,3 @@
 # infra
 
-Terraform-defined infrastructure for the radars project
+Terraform-defined infrastructure for Vélo-Cité projects
