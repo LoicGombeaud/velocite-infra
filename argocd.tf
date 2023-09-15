@@ -1,4 +1,3 @@
-
 resource "helm_release" "argocd" {
   name             = "argocd"
   repository       = "https://argoproj.github.io/argo-helm"
@@ -8,6 +7,10 @@ resource "helm_release" "argocd" {
   create_namespace = "true"
 
   values = [
-    "${file("argocd-values.yaml")}"
+    "${file("argocd/argocd-values.yaml")}"
   ]
+}
+
+resource "kubernetes_manifest" "root_application" {
+  manifest = yamldecode(file("argocd/root-application.yaml"))
 }
