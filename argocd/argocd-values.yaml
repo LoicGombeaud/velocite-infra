@@ -6,3 +6,6 @@ server:
       - argocd.velo-cite.org
   extraArgs:
     - --insecure
+configs:
+  cm:
+    timeout.reconciliation: 10s
