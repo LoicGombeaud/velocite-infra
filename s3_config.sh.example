@@ -1,0 +1,3 @@
+# Copy this file to s3_config.sh, and replace with actual values
+export AWS_ACCESS_KEY_ID=le vélo
+export AWS_SECRET_ACCESS_KEY=ça rend beau
