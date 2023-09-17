@@ -81,6 +81,7 @@ Installer terraform en suivant [les instructions officielles](https://developer.
 - copier le fichier `ovh_config.sh.example` vers `ovh_config.sh`
 - remplacer les valeurs de la clé d'accès et de la clé secrète
 - remplacer les valeurs de la clés d'application, du secret d'application et de la clé consommateur
+- remplacer la valeur du projet cloud public
 - exécuter `ovh_config.sh`
 
 ### Initialisation de terraform
