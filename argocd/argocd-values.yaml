@@ -3,7 +3,14 @@ server:
     enabled: true
     ingressClassName: nginx
     hosts:
-      - argocd.velo-cite.org
+      - argocd.loicgombeaud.com
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    tls:
+      - hosts:
+        - argocd.loicgombeaud.com
+        secretName: argocd-tls
   extraArgs:
     - --insecure
 configs:
